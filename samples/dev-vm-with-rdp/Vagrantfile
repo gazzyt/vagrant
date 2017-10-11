@@ -75,6 +75,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get install -y xrdp
 	echo 'lxsession -e LXDE -s Lubuntu' > /home/vagrant/.xsession
+	cp /vagrant/xrdp_keyboard.ini /etc/xrdp/xrdp_keyboard.ini
 	service xrdp restart
   SHELL
 end
