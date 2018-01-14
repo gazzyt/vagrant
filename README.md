@@ -6,3 +6,8 @@ If you are running vagrant on a domain joined machine then in order for the shar
 ```
 config.vm.synced_folder ".", "/vagrant", type: "smb", mount_options: ["domain=mydomain"]
 ```
+
+If you are using the Lubuntu 1710 box then you also need to set the smb version used (regardless of whether your host is domain joined or not):
+```
+config.vm.synced_folder ".", "/vagrant", type: "smb", mount_options: ["domain=mydomain","vers=1.0"]
+```
